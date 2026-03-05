@@ -10,3 +10,18 @@ entity reg is
         q: out std_logic_vector(width-1 downto 0)
     );
 end entity reg;
+
+architecture behavorial of reg is
+begin
+    process(clk, rstn)
+    begin
+	if rstn = '0' then
+	    q <= "00000000";
+
+	elsif rising_edge(clk) then
+	    if en = '1' then
+		q <= d;
+	    end if;
+	end if;
+    end process;
+end behavorial;
