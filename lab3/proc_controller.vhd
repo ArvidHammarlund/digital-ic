@@ -102,36 +102,29 @@ BEGIN
 
         case curr_state is
             when FE =>
-                if (master_load_enable = '1') then
-                    imRead <= '1'; 
-                    pcLd   <= '1'; 
-                end if;
-                pcSel  <= '0';
+                imRead <= '1'; 
+                pcLd   <= '1'; 
             when DE1 =>
-                if ((opcode(3) = '1') or (opcode = O_CMP)) then 
-                    if (not (opcode = O_SB) 
-                        and not (master_load_enable = '1')) 
-                    then 
-                        dmRead <= '1';
-                    end if;
+                if (opcode(3) = '1' or opcode = O_CMP) then 
+                    dmRead <= '1';
                     busSel <= B_IMEM; 
                 end if;
             when DE2 =>
                 if (opcode = O_LBI) then
-                    if(not master_load_enable = '1') then
-                        dmRead <= '1';
-                    end if;
+                    dmRead <= '1';
                     busSel <= B_DMEM;
                 end if;
             when EX =>
                 case opcode is
                     when O_ADD | O_SUB | O_AND | O_XOR | O_CMP =>
                         busSel <= B_DMEM; 
-                        aluOp  <= A_ADD when opcode = O_ADD else
-                                A_SUB when opcode = O_SUB else
-                                A_AND when opcode = O_AND else A_XOR;
+                        with opcode select
+                            aluOp <= A_ADD when O_ADD,
+                                    A_SUB when O_SUB,
+                                    A_AND when O_AND,
+                                    A_XOR when others;
                         flagLd <= '1';
-                        if (opcode /= O_CMP) then accLd <= '1'; end if;
+                        accLd  <= '1' when (opcode /= O_CMP) else '0';
                     when O_MOV =>
                         busSel <= B_IMEM;
                         accSel <= '1';
