@@ -43,7 +43,7 @@ ENTITY proc_controller IS
         accLd: out std_logic;
         -- Signals when the processor is ready for input
         inReady: out std_logic;
-        -- Indicates that data on extOut is valid
+        -- Indicates that data on extOut is vali    d
         outValid: out std_logic
     );
 END proc_controller;
@@ -60,6 +60,7 @@ BEGIN
             curr_state <= FE; 
         ELSIF (rising_edge(clk) AND (master_load_enable = '1')) THEN
             curr_state <= next_state; 
+        END IF;
     END PROCESS;
 
     next_state_logic: PROCESS(curr_state, opcode, inValid, outReady)
@@ -70,11 +71,16 @@ BEGIN
                 next_state <= DE1; 
             WHEN DE1 =>
                 CASE opcode IS
-                    WHEN O_NOOP => next_state <= FE; 
-                    WHEN O_LBI  => next_state <= DE2; 
-                    WHEN O_SB | O_SBI => next_state <= ME; 
-                    WHEN O_IN | O_OUT => next_state <= EX; 
-                    WHEN OTHERS => next_state <= EX; 
+                    WHEN O_NOOP => 
+                        next_state <= FE; 
+                    WHEN O_LBI  => 
+                        next_state <= DE2; 
+                    WHEN O_SB | O_SBI => 
+                        next_state <= ME; 
+                    WHEN O_IN | O_OUT => 
+                        next_state <= EX; 
+                    WHEN OTHERS => 
+                        next_state <= EX; 
                 END CASE;
             WHEN DE2 =>
                 next_state <= EX; 
@@ -118,11 +124,16 @@ BEGIN
                 case opcode is
                     when O_ADD | O_SUB | O_AND | O_XOR | O_CMP =>
                         busSel <= B_DMEM; 
-                        with opcode select
-                            aluOp <= A_ADD when O_ADD,
-                                    A_SUB when O_SUB,
-                                    A_AND when O_AND,
-                                    A_XOR when others;
+                        case opcode is
+                            when O_ADD =>
+                        aluOp <= A_ADD;
+                            when O_SUB =>
+                        aluOp <= A_SUB;
+                            when O_AND =>
+                        aluOp <= A_AND;
+                            when others =>
+                        aluOp <= A_XOR;
+                            end case;
                         flagLd <= '1';
                         accLd  <= '1' when (opcode /= O_CMP) else '0';
                     when O_MOV =>
