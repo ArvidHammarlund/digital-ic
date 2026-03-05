@@ -1,0 +1,140 @@
+C:/intelFPGA/20.1/tb_rca.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/tb_rca.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_rca
+-- Compiling architecture BEHAVORIAL of tb_rca
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading entity rca
+
+} {} {}} C:/intelFPGA/20.1/tb_csa.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/tb_csa.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_csa
+-- Compiling architecture BEHAVORIAL of tb_csa
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading entity csa
+
+} {} {}} C:/intelFPGA/20.1/cmp.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/cmp.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Compiling entity cmp
+-- Compiling architecture dataflow of cmp
+
+} {} {}} C:/intelFPGA/20.1/EDA322_processor.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/EDA322_processor.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity EDA322_processor
+
+} {} {}} C:/intelFPGA/20.1/chacc_pkg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/chacc_pkg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package chacc_pkg
+
+} {} {}} C:/intelFPGA/20.1/tb_cmp.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/tb_cmp.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_cmp
+-- Compiling architecture BEHAVORIAL of tb_cmp
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading entity cmp
+
+} {} {}} C:/intelFPGA/20.1/proc_bus.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/proc_bus.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package chacc_pkg
+-- Compiling entity proc_bus
+
+} {} {}} C:/intelFPGA/20.1/rca.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/rca.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Compiling entity rca
+-- Compiling architecture dataflow of rca
+-- Loading entity fa
+
+} {} {}} C:/intelFPGA/20.1/csa.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/csa.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Compiling entity csa
+-- Compiling architecture dataflow of csa
+-- Loading entity rca
+-- Loading package NUMERIC_STD
+-- Loading package chacc_pkg
+-- Loading entity mux
+
+} {} {}} C:/intelFPGA/20.1/fa.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/fa.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fa
+-- Compiling architecture dataflow of fa
+
+} {} {}} C:/intelFPGA/20.1/proc_controller.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/proc_controller.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package chacc_pkg
+-- Compiling entity proc_controller
+
+} {} {}} C:/intelFPGA/20.1/alu_testbench.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/intelFPGA/20.1/alu_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package chacc_pkg
+-- Compiling entity alu_testbench
+-- Compiling architecture BEHAVIORAL of alu_testbench
+
+} {} {}} C:/intelFPGA/20.1/memory.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/memory.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package chacc_pkg
+-- Compiling entity memory
+
+} {} {}} C:/intelFPGA/20.1/mux.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/mux.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package chacc_pkg
+-- Compiling entity mux
+-- Compiling architecture dataflow of mux
+
+} {} {}}

@@ -1,0 +1,1365 @@
+# Reading pref.tcl
+# Loading project lab1
+dataset reload -f
+# Dataset not found: 
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# 14 compiles, 0 failed with no errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd failed with 1 errors.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 6 errors.
+# 14 compiles, 2 failed with 7 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd failed with 1 errors.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 6 errors.
+# 14 compiles, 2 failed with 7 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd failed with 1 errors.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 6 errors.
+# 14 compiles, 2 failed with 7 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd failed with 1 errors.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 2 failed with 2 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd failed with 1 errors.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 2 failed with 2 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd failed with 1 errors.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 2 failed with 2 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd failed with 1 errors.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 2 failed with 2 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd failed with 1 errors.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 2 failed with 2 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd failed with 1 errors.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 2 failed with 2 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd failed with 1 errors.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 2 failed with 2 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 3 errors.
+# 14 compiles, 1 failed with 3 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 4 errors.
+# 14 compiles, 1 failed with 4 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# 14 compiles, 0 failed with no errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 5 errors.
+# 14 compiles, 1 failed with 5 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd failed with 1 errors.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 5 errors.
+# 14 compiles, 2 failed with 6 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 5 errors.
+# 14 compiles, 1 failed with 5 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 5 errors.
+# 14 compiles, 1 failed with 5 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 5 errors.
+# 14 compiles, 1 failed with 5 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 5 errors.
+# 14 compiles, 1 failed with 5 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 5 errors.
+# 14 compiles, 1 failed with 5 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd failed with 1 errors.
+# 14 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# 14 compiles, 0 failed with no errors.
+vsim -gui work.tb_rca
+# vsim -gui work.tb_rca 
+# Start time: 13:57:52 on Feb 16,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.tb_rca(behavorial)
+# Loading work.rca(dataflow)
+# Loading work.fa(dataflow)
+add wave -position insertpoint  \
+sim:/tb_rca/a_tb
+add wave -position insertpoint  \
+sim:/tb_rca/b_tb
+add wave -position insertpoint  \
+sim:/tb_rca/cin_tb
+add wave -position insertpoint  \
+sim:/tb_rca/cout_tb
+add wave -position insertpoint  \
+sim:/tb_rca/o_tb
+run
+run
+quit -sim
+# End time: 14:01:06 on Feb 16,2026, Elapsed time: 0:03:14
+# Errors: 0, Warnings: 35
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd failed with 2 errors.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# 14 compiles, 1 failed with 2 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# 14 compiles, 0 failed with no errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# 14 compiles, 0 failed with no errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_sca.vhd was successful.
+# 15 compiles, 0 failed with no errors.
+vsim -gui work.tb_sca
+# vsim -gui work.tb_sca 
+# Start time: 15:32:30 on Feb 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.tb_sca(behavorial)
+# Loading work.rca(dataflow)
+# ** Fatal: (vsim-3348) Port length (4) does not match actual length (8) for port "/tb_sca/DUT/A".
+#    Time: 0 ps  Iteration: 0  Instance: /tb_sca/DUT File: C:/intelFPGA/20.1/rca.vhd Line: 8
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 15:32:31 on Feb 20,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 6
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_sca.vhd failed with 3 errors.
+# 15 compiles, 1 failed with 3 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_sca.vhd was successful.
+# 15 compiles, 0 failed with no errors.
+vsim -gui work.tb_sca
+# vsim -gui work.tb_sca 
+# Start time: 15:35:03 on Feb 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.tb_sca(behavorial)
+# Loading ieee.numeric_std(body)
+# Loading work.chacc_pkg
+# Loading work.csa(dataflow)
+# Loading work.rca(dataflow)
+# Loading work.fa(dataflow)
+# Loading work.mux(dataflow)
+quit -sim
+# End time: 15:40:35 on Feb 20,2026, Elapsed time: 0:05:32
+# Errors: 0, Warnings: 3
+vsim -gui work.tb_sca
+# vsim -gui work.tb_sca 
+# Start time: 15:41:32 on Feb 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.tb_sca(behavorial)
+# Loading ieee.numeric_std(body)
+# Loading work.chacc_pkg
+# Loading work.csa(dataflow)
+# Loading work.rca(dataflow)
+# Loading work.fa(dataflow)
+# Loading work.mux(dataflow)
+run
+quit -sim
+# End time: 15:42:22 on Feb 20,2026, Elapsed time: 0:00:50
+# Errors: 0, Warnings: 1
+vsim -gui work.tb_sca
+# vsim -gui work.tb_sca 
+# Start time: 15:42:33 on Feb 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.tb_sca(behavorial)
+# Loading ieee.numeric_std(body)
+# Loading work.chacc_pkg
+# Loading work.csa(dataflow)
+# Loading work.rca(dataflow)
+# Loading work.fa(dataflow)
+# Loading work.mux(dataflow)
+run
+quit -sim
+# End time: 15:44:20 on Feb 20,2026, Elapsed time: 0:01:47
+# Errors: 0, Warnings: 1
+vsim -gui work.tb_sca
+# vsim -gui work.tb_sca 
+# Start time: 15:45:03 on Feb 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.tb_sca(behavorial)
+# Loading ieee.numeric_std(body)
+# Loading work.chacc_pkg
+# Loading work.csa(dataflow)
+# Loading work.rca(dataflow)
+# Loading work.fa(dataflow)
+# Loading work.mux(dataflow)
+add wave -position insertpoint  \
+sim:/tb_sca/a_tb
+add wave -position insertpoint  \
+sim:/tb_sca/b_tb
+add wave -position insertpoint  \
+sim:/tb_sca/cin_tb
+add wave -position insertpoint  \
+sim:/tb_sca/cout_tb
+add wave -position insertpoint  \
+sim:/tb_sca/o_tb
+run
+quit -sim
+# End time: 15:52:50 on Feb 20,2026, Elapsed time: 0:07:47
+# Errors: 0, Warnings: 1
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# 14 compiles, 1 failed with no errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_csa.vhd failed with 1 errors.
+# 15 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_csa.vhd failed with 1 errors.
+# 15 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_csa.vhd failed with 1 errors.
+# 15 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_csa.vhd was successful.
+# 15 compiles, 0 failed with no errors.
+vsim -gui work.tb_csa
+# vsim -gui work.tb_csa 
+# Start time: 15:55:53 on Feb 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.tb_csa(behavorial)
+# Loading ieee.numeric_std(body)
+# Loading work.chacc_pkg
+# Loading work.csa(dataflow)
+# Loading work.rca(dataflow)
+# Loading work.fa(dataflow)
+# Loading work.mux(dataflow)
+add wave -position insertpoint  \
+sim:/tb_csa/a_tb
+add wave -position insertpoint  \
+sim:/tb_csa/b_tb
+add wave -position insertpoint  \
+sim:/tb_csa/cin_tb
+add wave -position insertpoint  \
+sim:/tb_csa/cout_tb
+add wave -position insertpoint  \
+sim:/tb_csa/o_tb
+run
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_csa.vhd was successful.
+# 15 compiles, 0 failed with no errors.
+quit -sim
+# End time: 16:03:22 on Feb 20,2026, Elapsed time: 0:07:29
+# Errors: 0, Warnings: 9
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_csa.vhd was successful.
+# 15 compiles, 0 failed with no errors.
+vsim -gui work.tb_csa
+# vsim -gui work.tb_csa 
+# Start time: 16:03:44 on Feb 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.tb_csa(behavorial)
+# Loading ieee.numeric_std(body)
+# Loading work.chacc_pkg
+# Loading work.csa(dataflow)
+# Loading work.rca(dataflow)
+# Loading work.fa(dataflow)
+# Loading work.mux(dataflow)
+add wave -position insertpoint  \
+sim:/tb_csa/a_tb
+add wave -position insertpoint  \
+sim:/tb_csa/b_tb
+add wave -position insertpoint  \
+sim:/tb_csa/cin_tb
+add wave -position insertpoint  \
+sim:/tb_csa/cout_tb
+add wave -position insertpoint  \
+sim:/tb_csa/o_tb
+run
+quit -sim
+# End time: 16:05:56 on Feb 20,2026, Elapsed time: 0:02:12
+# Errors: 0, Warnings: 2
+view source
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_csa.vhd was successful.
+# 15 compiles, 0 failed with no errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_csa.vhd was successful.
+# Compile of tb_cmp.vhd failed with 2 errors.
+# 16 compiles, 1 failed with 2 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_csa.vhd was successful.
+# Compile of tb_cmp.vhd failed with 2 errors.
+# 16 compiles, 1 failed with 2 errors.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_csa.vhd was successful.
+# Compile of tb_cmp.vhd failed with 1 errors.
+# 16 compiles, 1 failed with 1 error.
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_csa.vhd was successful.
+# Compile of tb_cmp.vhd was successful.
+# 16 compiles, 0 failed with no errors.
+vsim -gui work.tb_cmp
+# vsim -gui work.tb_cmp 
+# Start time: 16:21:48 on Feb 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.tb_cmp(behavorial)
+# Loading work.cmp(dataflow)
+add wave -position insertpoint  \
+sim:/tb_cmp/a_tb
+add wave -position insertpoint  \
+sim:/tb_cmp/b_tb
+add wave -position insertpoint  \
+sim:/tb_cmp/e_tb
+run
+quit -sim
+# End time: 16:25:34 on Feb 20,2026, Elapsed time: 0:03:46
+# Errors: 0, Warnings: 7
+vsim -gui work.alu_testbench
+# vsim -gui work.alu_testbench 
+# Start time: 16:26:04 on Feb 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.chacc_pkg
+# Loading work.alu_testbench(behavioral)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.alu(dataflow)
+# Loading work.mux(dataflow)
+# Loading work.csa(dataflow)
+# Loading work.rca(dataflow)
+# Loading work.fa(dataflow)
+# Loading work.cmp(dataflow)
+add wave -position insertpoint  \
+sim:/alu_testbench/AMem
+add wave -position insertpoint  \
+sim:/alu_testbench/BMem
+add wave -position insertpoint  \
+sim:/alu_testbench/OpMem
+add wave -position insertpoint  \
+sim:/alu_testbench/op_a
+add wave -position insertpoint  \
+sim:/alu_testbench/op_b
+add wave -position insertpoint  \
+sim:/alu_testbench/op_out
+add wave -position insertpoint  \
+sim:/alu_testbench/exp_op_out
+add wave -position insertpoint  \
+sim:/alu_testbench/opcode
+add wave -position insertpoint  \
+sim:/alu_testbench/Eq
+add wave -position insertpoint  \
+sim:/alu_testbench/isOutZero
+add wave -position insertpoint  \
+sim:/alu_testbench/exp_eq
+add wave -position insertpoint  \
+sim:/alu_testbench/exp_zero
+add wave -position insertpoint  \
+sim:/alu_testbench/flags_correct
+add wave -position insertpoint  \
+sim:/alu_testbench/vec_count
+add wave -position insertpoint  \
+sim:/alu_testbench/Size
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /alu_testbench
+# ** Warning: (vsim-7) Failed to open VHDL file "Op_mod_FINAL.tv" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /alu_testbench
+# ** Fatal: (vsim-7) Failed to open VHDL file "Op_mod_FINAL.tv" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Process: /alu_testbench/line__111 File: C:/intelFPGA/20.1/alu_testbench.vhd
+# Fatal error in Subprogram loadOpCode at C:/intelFPGA/20.1/alu_testbench.vhd line 72
+# 
+# HDL call sequence:
+# Stopped at C:/intelFPGA/20.1/alu_testbench.vhd 72 Subprogram loadOpCode
+# called from  C:/intelFPGA/20.1/alu_testbench.vhd 111 Architecture BEHAVIORAL
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/intelFPGA/20.1/alu_testbench.vhd 72 Subprogram loadOpCode
+# called from  C:/intelFPGA/20.1/alu_testbench.vhd 111 Architecture BEHAVIORAL
+# 
+quit -sim
+# End time: 16:28:00 on Feb 20,2026, Elapsed time: 0:01:56
+# Errors: 1, Warnings: 3
+vsim -gui work.alu_testbench
+# vsim -gui work.alu_testbench 
+# Start time: 16:34:17 on Feb 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.chacc_pkg
+# Loading work.alu_testbench(behavioral)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.alu(dataflow)
+# Loading work.mux(dataflow)
+# Loading work.csa(dataflow)
+# Loading work.rca(dataflow)
+# Loading work.fa(dataflow)
+# Loading work.cmp(dataflow)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /alu_testbench
+# ** Warning: (vsim-7) Failed to open VHDL file "Op_mod_FINAL.tv" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /alu_testbench
+# ** Fatal: (vsim-7) Failed to open VHDL file "Op_mod_FINAL.tv" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Process: /alu_testbench/line__111 File: C:/intelFPGA/20.1/alu_testbench.vhd
+# Fatal error in Subprogram loadOpCode at C:/intelFPGA/20.1/alu_testbench.vhd line 72
+# 
+# HDL call sequence:
+# Stopped at C:/intelFPGA/20.1/alu_testbench.vhd 72 Subprogram loadOpCode
+# called from  C:/intelFPGA/20.1/alu_testbench.vhd 111 Architecture BEHAVIORAL
+# 
+quit -sim
+# End time: 16:35:19 on Feb 20,2026, Elapsed time: 0:01:02
+# Errors: 1, Warnings: 3
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_csa.vhd was successful.
+# Compile of tb_cmp.vhd was successful.
+# 16 compiles, 0 failed with no errors.
+vsim -gui work.alu_testbench
+# vsim -gui work.alu_testbench 
+# Start time: 16:37:23 on Feb 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.chacc_pkg
+# Loading work.alu_testbench(behavioral)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.alu(dataflow)
+# Loading work.mux(dataflow)
+# Loading work.csa(dataflow)
+# Loading work.rca(dataflow)
+# Loading work.fa(dataflow)
+# Loading work.cmp(dataflow)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /alu_testbench
+# ** Warning: (vsim-7) Failed to open VHDL file "Op_mod_FINAL.tv" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /alu_testbench
+# ** Fatal: (vsim-7) Failed to open VHDL file "Op_mod_FINAL.tv" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Process: /alu_testbench/line__111 File: C:/intelFPGA/20.1/alu_testbench.vhd
+# Fatal error in Subprogram loadOpCode at C:/intelFPGA/20.1/alu_testbench.vhd line 72
+# 
+# HDL call sequence:
+# Stopped at C:/intelFPGA/20.1/alu_testbench.vhd 72 Subprogram loadOpCode
+# called from  C:/intelFPGA/20.1/alu_testbench.vhd 111 Architecture BEHAVIORAL
+# 
+quit -sim
+vsim -gui work.alu_testbench
+# End time: 16:39:15 on Feb 20,2026, Elapsed time: 0:01:52
+# Errors: 1, Warnings: 5
+# vsim -gui work.alu_testbench 
+# Start time: 16:39:15 on Feb 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.chacc_pkg
+# Loading work.alu_testbench(behavioral)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.alu(dataflow)
+# Loading work.mux(dataflow)
+# Loading work.csa(dataflow)
+# Loading work.rca(dataflow)
+# Loading work.fa(dataflow)
+# Loading work.cmp(dataflow)
+add wave -position insertpoint  \
+sim:/alu_testbench/AMem
+add wave -position insertpoint  \
+sim:/alu_testbench/BMem
+add wave -position insertpoint {{}}
+# ** UI-Msg: (vish-4014) No objects found matching '{'.
+# Note :: PA Debug File '' not found. PA Dataflow Coloring not enabled.
+add wave -position insertpoint  \
+sim:/alu_testbench/op_b
+add wave -position insertpoint  \
+sim:/alu_testbench/OpMem
+add wave -position insertpoint  \
+sim:/alu_testbench/op_a
+add wave -position insertpoint  \
+sim:/alu_testbench/op_out
+add wave -position insertpoint  \
+sim:/alu_testbench/exp_op_out
+add wave -position insertpoint  \
+sim:/alu_testbench/opcode
+add wave -position insertpoint  \
+sim:/alu_testbench/Eq
+add wave -position insertpoint  \
+sim:/alu_testbench/isOutZero
+add wave -position insertpoint  \
+sim:/alu_testbench/exp_eq
+add wave -position insertpoint  \
+sim:/alu_testbench/exp_zero
+add wave -position insertpoint  \
+sim:/alu_testbench/flags_correct
+add wave -position insertpoint  \
+sim:/alu_testbench/vec_count
+add wave -position insertpoint  \
+sim:/alu_testbench/Size
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /alu_testbench
+# ** Warning: (vsim-7) Failed to open VHDL file "Op_mod_FINAL.tv" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /alu_testbench
+# ** Fatal: (vsim-7) Failed to open VHDL file "Op_mod_FINAL.tv" in rb mode.
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Process: /alu_testbench/line__111 File: C:/intelFPGA/20.1/alu_testbench.vhd
+# Fatal error in Subprogram loadOpCode at C:/intelFPGA/20.1/alu_testbench.vhd line 72
+# 
+# HDL call sequence:
+# Stopped at C:/intelFPGA/20.1/alu_testbench.vhd 72 Subprogram loadOpCode
+# called from  C:/intelFPGA/20.1/alu_testbench.vhd 111 Architecture BEHAVIORAL
+# 
+quit -sim
+# End time: 16:42:15 on Feb 20,2026, Elapsed time: 0:03:00
+# Errors: 1, Warnings: 3
+# Compile of alu_testbench.vhd was successful.
+# Compile of fa.vhd was successful.
+# Compile of alu.vhd was successful.
+# Compile of chacc_pkg.vhd was successful.
+# Compile of cmp.vhd was successful.
+# Compile of csa.vhd was successful.
+# Compile of EDA322_processor.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mux.vhd was successful.
+# Compile of proc_bus.vhd was successful.
+# Compile of proc_controller.vhd was successful.
+# Compile of rca.vhd was successful.
+# Compile of reg.vhd was successful.
+# Compile of tb_rca.vhd was successful.
+# Compile of tb_csa.vhd was successful.
+# Compile of tb_cmp.vhd was successful.
+# 16 compiles, 0 failed with no errors.
+vsim -gui work.alu_testbench
+# vsim -gui work.alu_testbench 
+# Start time: 16:42:33 on Feb 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.chacc_pkg
+# Loading work.alu_testbench(behavioral)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.alu(dataflow)
+# Loading work.mux(dataflow)
+# Loading work.csa(dataflow)
+# Loading work.rca(dataflow)
+# Loading work.fa(dataflow)
+# Loading work.cmp(dataflow)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /alu_testbench
+# ** Note: Test passed
+#    Time: 2 us  Iteration: 0  Instance: /alu_testbench
+# ** Failure: Simulation Ended
+#    Time: 2 us  Iteration: 0  Process: /alu_testbench/line__137 File: C:/intelFPGA/20.1/alu_testbench.vhd
+# Break in Process line__137 at C:/intelFPGA/20.1/alu_testbench.vhd line 153
+quit -sim
+# End time: 16:43:42 on Feb 20,2026, Elapsed time: 0:01:09
+# Errors: 1, Warnings: 3
+vsim -gui work.alu_testbench
+# vsim -gui work.alu_testbench 
+# Start time: 16:43:50 on Feb 20,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.chacc_pkg
+# Loading work.alu_testbench(behavioral)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.alu(dataflow)
+# Loading work.mux(dataflow)
+# Loading work.csa(dataflow)
+# Loading work.rca(dataflow)
+# Loading work.fa(dataflow)
+# Loading work.cmp(dataflow)
+add wave -position insertpoint {{}}
+# ** UI-Msg: (vish-4014) No objects found matching '{'.
+add wave -position insertpoint  \
+sim:/alu_testbench/BMem
+add wave -position insertpoint  \
+sim:/alu_testbench/AMem
+add wave -position insertpoint  \
+sim:/alu_testbench/OpMem
+add wave -position insertpoint  \
+sim:/alu_testbench/op_a
+add wave -position insertpoint  \
+sim:/alu_testbench/op_b
+add wave -position insertpoint  \
+sim:/alu_testbench/op_out
+add wave -position insertpoint  \
+sim:/alu_testbench/exp_op_out
+add wave -position insertpoint  \
+sim:/alu_testbench/opcode
+add wave -position insertpoint  \
+sim:/alu_testbench/Eq
+add wave -position insertpoint  \
+sim:/alu_testbench/isOutZero
+add wave -position insertpoint  \
+sim:/alu_testbench/exp_eq
+add wave -position insertpoint  \
+sim:/alu_testbench/exp_zero
+add wave -position insertpoint  \
+sim:/alu_testbench/flags_correct
+add wave -position insertpoint  \
+sim:/alu_testbench/vec_count
+add wave -position insertpoint  \
+sim:/alu_testbench/Size
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /alu_testbench
+# ** Note: Test passed
+#    Time: 2 us  Iteration: 0  Instance: /alu_testbench
+# ** Failure: Simulation Ended
+#    Time: 2 us  Iteration: 0  Process: /alu_testbench/line__137 File: C:/intelFPGA/20.1/alu_testbench.vhd
+# Break in Process line__137 at C:/intelFPGA/20.1/alu_testbench.vhd line 153
+quit -sim
+# End time: 17:49:59 on Feb 23,2026, Elapsed time: 73:06:09
+# Errors: 1, Warnings: 2
+vsim -gui work.tb_csa
+# vsim -gui work.tb_csa 
+# Start time: 17:54:26 on Feb 23,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.tb_csa(behavorial)
+# Loading ieee.numeric_std(body)
+# Loading work.chacc_pkg
+# Loading work.csa(dataflow)
+# Loading work.rca(dataflow)
+# Loading work.fa(dataflow)
+# Loading work.mux(dataflow)
+add wave -position insertpoint  \
+sim:/tb_csa/a_tb
+add wave -position insertpoint  \
+sim:/tb_csa/b_tb
+add wave -position insertpoint  \
+sim:/tb_csa/cin_tb
+add wave -position insertpoint  \
+sim:/tb_csa/cout_tb
+add wave -position insertpoint  \
+sim:/tb_csa/o_tb
+run
+quit -sim
+# End time: 17:55:44 on Feb 23,2026, Elapsed time: 0:01:18
+# Errors: 0, Warnings: 1

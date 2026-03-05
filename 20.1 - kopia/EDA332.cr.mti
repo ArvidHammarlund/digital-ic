@@ -1,0 +1,17 @@
+C:/intelFPGA/20.1/tb_tutorial_lab.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/tb_tutorial_lab.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_tutorial_lab
+-- Compiling architecture tb_tutorial_lab_arch of tb_tutorial_lab
+
+} {} {}} C:/intelFPGA/20.1/tutorial_lab.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/intelFPGA/20.1/tutorial_lab.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tutorial_lab
+-- Compiling architecture Behavioral of tutorial_lab
+
+} {} {}}

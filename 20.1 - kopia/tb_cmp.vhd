@@ -1,0 +1,40 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity tb_cmp is
+end entity tb_cmp;
+
+architecture BEHAVORIAL of tb_cmp is
+
+component cmp_tb
+
+    port(a: in   std_logic_vector (7 downto 0);
+         b: in   std_logic_vector (7 downto 0);
+    	 e: out  std_logic);
+
+end component;
+
+signal a_tb: std_logic_vector(7 downto 0):= (others => '0');
+signal b_tb: std_logic_vector(7 downto 0):= (others => '0');
+signal e_tb: std_logic := '0';
+
+begin
+DUT: entity work.cmp
+    port map (
+        a => a_tb,  
+        b => b_tb,
+        e => e_tb);
+
+ Testing: PROCESS
+ BEGIN
+
+    a_tb <= "00001111";
+    b_tb <= "11110000";
+    wait for 10 ns;
+
+    a_tb <= "00111100";
+    b_tb <= "00111100";
+    wait for 10 ns;
+
+END PROCESS;
+END architecture BEHAVORIAL;

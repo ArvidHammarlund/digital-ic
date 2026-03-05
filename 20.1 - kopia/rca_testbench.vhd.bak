@@ -1,0 +1,11 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity rca_testbench is
+end rca_testbench;
+
+architecture behavorial of rca_testbench is
+
+begin
+
+end architecture;
