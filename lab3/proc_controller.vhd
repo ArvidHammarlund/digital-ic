@@ -106,6 +106,39 @@ BEGIN
         aluOp   <= A_XOR;  flagLd  <= '0'; accSel   <= '0';
         accLd   <= '0';    inReady <= '0'; outValid <= '0';
 
+        if ((not (opcode = O_SB) or not (opcode = O_SBI))) then
+            dmWrite <= '0';
+        end if;
+
+        if 
+
+        if (opcode = O_NOOP) then
+            busSel <= "0000";
+            dmRead <= '0';
+            dmWrite <= '0';
+            flagLd <= '0';
+            accLd <= '0';
+            inReady <= '0';
+            outValid <= '0';
+        end if;
+
+        if (opcode = O_IN) then
+            dmRead <= '0';
+            dmWrite <= '0';
+            flagLd <= '0';
+            accLd <= '0';
+            outValid <= '0';
+        end if;
+
+        if (opcode = O_OUT) then
+            busSel <= "0000";
+            dmRead <= '0';
+            dmWrite <= '0';
+            flagLd <= '0';
+            accLd <= '0';
+            inReady <= '0';
+        end if;
+
         case curr_state is
             when FE =>
                 pcSell <= "0";
@@ -222,6 +255,7 @@ BEGIN
                     busSel <= "0010";
                     dmWrite <= "1";
                 end if;
+
             when OTHERS => NULL;
         end case;
 
