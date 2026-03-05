@@ -153,7 +153,12 @@ BEGIN
                     when O_JE | O_JNZ | O_J =>
                         busSel <= B_IMEM;
                         pcSel <= '1';
-                        pcLd  <= '1';
+                        if (e_flag = '1' and opcode = O_JE) then
+                            pcLd  <= '1';
+                        end if;
+                        if (z_flag = '0' and opcode = O_JNZ) then
+                            pcLd  <= '1';
+                        end if;
                     when O_IN =>
                         inReady <= '1';
                         if (inValid = '1') then
@@ -173,10 +178,7 @@ BEGIN
                 dmRead <= '0';
             when others => null;
         end case;
-    end process;
 
-    master_load_enable_process: PROCESS(master_load_enable)
-    BEGIN
         IF master_load_enable = '0' THEN
             imRead <= '0';
             dmRead <= '0';
@@ -187,5 +189,6 @@ BEGIN
             inReady <= '0';
             outValid <= '0';
         END IF;
-    END PROCESS;
+    end process;
+
 END behavioral;
