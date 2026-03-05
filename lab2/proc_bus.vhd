@@ -14,3 +14,13 @@ entity proc_bus is
         busOut     : out std_logic_vector(7 downto 0)
     );
 end proc_bus;
+
+architecture dataflow of proc_bus is
+begin
+
+    busOut <= imDataOut when busSel(0) = '1' else (others => 'Z');
+    busOut <= dmDataOut when busSel(1) = '1' else (others => 'Z');
+    busOut <= accOut when busSel(2) = '1' else (others => 'Z');
+    busOut <= extIn when busSel(3) = '1' else (others => 'Z');
+
+end architecture dataflow;
