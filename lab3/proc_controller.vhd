@@ -112,6 +112,9 @@ BEGIN
                 pcLd    <= '1'; 
                 dmWrite <= '0';
                 dmRead  <= '0';
+                flagLd  <= '0';
+                inReady  <= '0';
+                outValid <= '0';
             when DE1 =>
                 if (opcode(3) = '1' or opcode = O_CMP) then 
                     dmRead <= '1';
@@ -149,7 +152,7 @@ BEGIN
                         accSel <= '1';
                         accLd  <= '1';
                     when O_JE | O_JNZ | O_J =>
-                        pcSel <= '1';
+                        busSel <= B_IMEM;
                         if (opcode = O_J or (opcode = O_JE and e_flag = '1') or (opcode = O_JNZ and z_flag = '0')) then
                             pcSel <= '1';
                             if (master_load_enable = '1') then
