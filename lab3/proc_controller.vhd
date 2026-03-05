@@ -109,7 +109,11 @@ BEGIN
         case curr_state is
             when FE =>
                 imRead  <= '1'; 
-                pcLd    <= '1'; 
+                if (master_load_enable = '0') then 
+                    pcLd <= '0';
+                else 
+                    pcLd <= '1'; 
+                end if;
                 dmWrite <= '0';
                 dmRead  <= '0';
                 flagLd  <= '0';
@@ -128,7 +132,9 @@ BEGIN
                 else
                     dmRead <= '0';
                 end if;
-                pcLd <= '0';
+                if (master_load_enable = '0') then 
+                    pcLd <= '0';
+                end if;
             when EX =>
                 case opcode is
                     when O_ADD | O_SUB | O_AND | O_XOR | O_CMP =>
@@ -159,7 +165,6 @@ BEGIN
                         if (master_load_enable = '1') then
                             pcLd  <= '1';
                         end if;
-         
                     when O_IN =>
                         inReady <= '1';
                         if (inValid = '1') then
@@ -167,13 +172,9 @@ BEGIN
                         end if;
                     when O_OUT =>
                         outValid <= '1';
-                    when others => null;
+                    when others => 
+                        pcSel <= '0';
                 end case;
-                if (opcode = O_J) then
-                    pcSel <= '1';
-                else
-                    pcSel <= '0';
-                end if;
                 dmRead <= '0';
             when ME =>
                 if (opcode = O_SB or opcode = O_SBI) then
@@ -182,7 +183,9 @@ BEGIN
                     end if;
                     busSel  <= B_DMEM; 
                 end if;
-                pcLd <= '0';
+                if (master_load_enable = '0') then 
+                    pcLd <= '0';
+                end if; 
                 dmRead <= '0';
             when others => null;
         end case;
