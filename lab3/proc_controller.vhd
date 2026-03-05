@@ -109,11 +109,7 @@ BEGIN
         case curr_state is
             when FE =>
                 imRead  <= '1'; 
-                if (master_load_enable = '0') then 
-                    pcLd <= '0';
-                else 
-                    pcLd <= '1'; 
-                end if;
+                pcLd <= '1'; 
                 dmWrite <= '0';
                 dmRead  <= '0';
                 flagLd  <= '0';
@@ -126,14 +122,9 @@ BEGIN
                 end if;
                 pcLd <= '0';
             when DE2 =>
-                if (opcode = O_LBI and master_load_enable = '1') then
+                if (opcode = O_LBI) then
                     dmRead <= '1';
                     busSel <= B_DMEM;
-                else
-                    dmRead <= '0';
-                end if;
-                if (master_load_enable = '0') then 
-                    pcLd <= '0';
                 end if;
             when EX =>
                 case opcode is
@@ -162,9 +153,7 @@ BEGIN
                     when O_JE | O_JNZ | O_J =>
                         busSel <= B_IMEM;
                         pcSel <= '1';
-                        if (master_load_enable = '1') then
-                            pcLd  <= '1';
-                        end if;
+                        pcLd  <= '1';
                     when O_IN =>
                         inReady <= '1';
                         if (inValid = '1') then
@@ -178,16 +167,25 @@ BEGIN
                 dmRead <= '0';
             when ME =>
                 if (opcode = O_SB or opcode = O_SBI) then
-                    if (master_load_enable = '1') then
-                        dmWrite <= '1'; 
-                    end if;
+                    dmWrite <= '1'; 
                     busSel  <= B_DMEM; 
                 end if;
-                if (master_load_enable = '0') then 
-                    pcLd <= '0';
-                end if; 
                 dmRead <= '0';
             when others => null;
         end case;
     end process;
+
+    master_load_enable_process: PROCESS(master_load_enable)
+    BEGIN
+        IF master_load_enable = '0' THEN
+            imRead <= '0';
+            dmRead <= '0';
+            dmWrite <= '0';
+            pcLd <= '0';
+            flagLd <= '0';
+            accLd <= '0';
+            inReady <= '0';
+            outValid <= '0';
+        END IF;
+    END PROCESS;
 END behavioral;
