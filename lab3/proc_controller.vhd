@@ -120,6 +120,7 @@ BEGIN
                     dmRead <= '1';
                     busSel <= B_IMEM; 
                 end if;
+                pcLd <= '0';
             when DE2 =>
                 if (opcode = O_LBI and master_load_enable = '1') then
                     dmRead <= '1';
@@ -127,6 +128,7 @@ BEGIN
                 else
                     dmRead <= '0';
                 end if;
+                pcLd <= '0';
             when EX =>
                 case opcode is
                     when O_ADD | O_SUB | O_AND | O_XOR | O_CMP =>
@@ -167,6 +169,11 @@ BEGIN
                         outValid <= '1';
                     when others => null;
                 end case;
+                if (opcode = O_J) then
+                    pcSel <= '1';
+                else
+                    pcSel <= '0';
+                end if;
                 dmRead <= '0';
             when ME =>
                 if (opcode = O_SB or opcode = O_SBI) then
@@ -175,6 +182,7 @@ BEGIN
                     end if;
                     busSel  <= B_DMEM; 
                 end if;
+                pcLd <= '0';
                 dmRead <= '0';
             when others => null;
         end case;
