@@ -99,7 +99,7 @@ BEGIN
         END CASE;
     END PROCESS;
 
-    output_logic: PROCESS(curr_state, opcode, e_flag, z_flag, inValid, outReady)
+    output_logic: PROCESS(curr_state, opcode, e_flag, z_flag, inValid, outReady, master_load_enable)
     begin
         busSel  <= "0000"; pcSel   <= '0'; pcLd     <= '0';
         imRead  <= '0';    dmRead  <= '0'; dmWrite  <= '0';
@@ -108,17 +108,21 @@ BEGIN
 
         case curr_state is
             when FE =>
-                imRead <= '1'; 
-                pcLd   <= '1'; 
+                imRead  <= '1'; 
+                pcLd    <= '1'; 
+                dmWrite <= '0';
+                dmRead  <= '0';
             when DE1 =>
                 if (opcode(3) = '1' or opcode = O_CMP) then 
                     dmRead <= '1';
                     busSel <= B_IMEM; 
                 end if;
             when DE2 =>
-                if (opcode = O_LBI) then
+                if (opcode = O_LBI and master_load_enable = '1') then
                     dmRead <= '1';
                     busSel <= B_DMEM;
+                else
+                    dmRead <= '0';
                 end if;
             when EX =>
                 case opcode is
@@ -126,24 +130,31 @@ BEGIN
                         busSel <= B_DMEM; 
                         case opcode is
                             when O_ADD =>
-                        aluOp <= A_ADD;
+                                aluOp <= A_ADD;
                             when O_SUB =>
-                        aluOp <= A_SUB;
+                                aluOp <= A_SUB;
                             when O_AND =>
-                        aluOp <= A_AND;
+                                aluOp <= A_AND;
                             when others =>
-                        aluOp <= A_XOR;
+                                aluOp <= A_XOR;
                             end case;
                         flagLd <= '1';
-                        accLd  <= '1' when (opcode /= O_CMP) else '0';
+                        if (opcode /= O_CMP) then
+                            accLd <= '1';
+                        else
+                            accLd <= '0';
+                        end if;
                     when O_MOV =>
                         busSel <= B_IMEM;
                         accSel <= '1';
                         accLd  <= '1';
                     when O_JE | O_JNZ | O_J =>
+                        pcSel <= '1';
                         if (opcode = O_J or (opcode = O_JE and e_flag = '1') or (opcode = O_JNZ and z_flag = '0')) then
                             pcSel <= '1';
-                            pcLd  <= '1';
+                            if (master_load_enable = '1') then
+                                pcLd  <= '1';
+                            end if;
                         end if;
                     when O_IN =>
                         inReady <= '1';
@@ -154,9 +165,15 @@ BEGIN
                         outValid <= '1';
                     when others => null;
                 end case;
+                dmRead <= '0';
             when ME =>
-                dmWrite <= '1'; 
-                busSel  <= B_ACC; 
+                if (opcode = O_SB or opcode = O_SBI) then
+                    if (master_load_enable = '1') then
+                        dmWrite <= '1'; 
+                    end if;
+                    busSel  <= B_DMEM; 
+                end if;
+                dmRead <= '0';
             when others => null;
         end case;
     end process;
