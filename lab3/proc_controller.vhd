@@ -153,12 +153,11 @@ BEGIN
                         accLd  <= '1';
                     when O_JE | O_JNZ | O_J =>
                         busSel <= B_IMEM;
-                        if (opcode = O_J or (opcode = O_JE and e_flag = '1') or (opcode = O_JNZ and z_flag = '0')) then
-                            pcSel <= '1';
-                            if (master_load_enable = '1') then
-                                pcLd  <= '1';
-                            end if;
+                        pcSel <= '1';
+                        if (master_load_enable = '1') then
+                            pcLd  <= '1';
                         end if;
+         
                     when O_IN =>
                         inReady <= '1';
                         if (inValid = '1') then
