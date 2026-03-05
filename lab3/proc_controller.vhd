@@ -106,38 +106,47 @@ BEGIN
         aluOp   <= A_XOR;  flagLd  <= '0'; accSel   <= '0';
         accLd   <= '0';    inReady <= '0'; outValid <= '0';
 
-        if ((not (opcode = O_SB) or not (opcode = O_SBI))) then
-            dmWrite <= '0';
-        end if;
-
-        if 
-
         if (opcode = O_NOOP) then
             busSel <= "0000";
-            dmRead <= '0';
-            dmWrite <= '0';
-            flagLd <= '0';
-            accLd <= '0';
-            inReady <= '0';
-            outValid <= '0';
-        end if;
-
-        if (opcode = O_IN) then
-            dmRead <= '0';
-            dmWrite <= '0';
-            flagLd <= '0';
-            accLd <= '0';
-            outValid <= '0';
         end if;
 
         if (opcode = O_OUT) then
             busSel <= "0000";
-            dmRead <= '0';
+        end if;
+
+        if (opcode != O_SB and opcode != O_SBI) then
             dmWrite <= '0';
-            flagLd <= '0';
-            accLd <= '0';
+        end if;
+
+        if (opcode != O_OUT) then
+            outValid <= '0';
+        end if;
+
+        if (opcode != O_IN) then
             inReady <= '0';
         end if;
+
+        case opcode is 
+            when O_MOV | O_J | O_JE | O_JNZ | O_SB | O_IN | O_OUT | O_NOOP =>
+                dmRead <= '0';
+            when OTHERS => NULL;
+            end case;
+
+        case opcode is
+            when O_CMP | O_XOR | O_AND | O_ADD | O_SUB  =>
+                NULL;
+            when OTHERS => 
+                flagLd <= '0';
+        end case;
+
+        case opcode is 
+            -- in, move, xor, and, add, sub
+            when O_IN | O_MOV | O_XOR | O_AND | O_ADD | O_SUB | O_LB | O_LBI =>
+                NULL;
+            when OTHERS =>
+                accLd <= '0';
+        end case;
+
 
         case curr_state is
             when FE =>
