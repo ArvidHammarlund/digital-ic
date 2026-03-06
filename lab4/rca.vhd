@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_misc.all;
+
+entity rca is
+    generic (width: integer := 4);
+    port(
+        A, B: in std_logic_vector(width-1 downto 0);
+        cin: in std_logic;
+        cout: out std_logic;
+        O: out std_logic_vector(width-1 downto 0)
+    );
+end rca;
+
+architecture dataflow of rca is
+    signal c: std_logic_vector(width downto 0);
+
+begin
+    c(0) <= cin;
+    cout <= c(width);
+
+    gen_fa: for i in 0 to width-1 generate
+        fa_i: entity work.fa
+            port map(
+                a    => A(i),
+                b    => B(i),
+                cin  => c(i),
+                cout => c(i+1),
+                s    => O(i)
+            );
+    end generate;
+
+end dataflow;
