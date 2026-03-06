@@ -155,10 +155,20 @@ BEGIN
                 pcLd   <= "1";
             when DE1 =>
                 if (
-                    opcode = O_CMP or opcode = O_XOR or opcode = O_AND or opcode = O_ADD or opcode = O_SUB or opcode = O_LB or opcode = O_SB or opcode = O_LBI or opcode = O_SBI
+                    opcode = O_CMP or opcode = O_XOR or opcode = O_AND or opcode = O_ADD or opcode = O_SUB or opcode = O_LB or opcode = O_LBI or opcode = O_SBI
                 ) then
                     busSel <= "0001";
                     dmRead <= "1";
+
+                case opcode is 
+                    when O_CMP | O_XOR | O_AND | O_ADD | O_SUB | O_LB | O_SB | O_LBI | O_SBI =>
+                        busSel <= "0001";
+                        dmRead <= "1";
+                    when OTHERS =>
+                        NULL;
+                end case;
+
+                end if;
             when DE2 =>
                 if (opcode = O_LBI) then
                     busSel <= "0010";
