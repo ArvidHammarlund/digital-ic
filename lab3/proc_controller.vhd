@@ -150,20 +150,20 @@ BEGIN
 
         case curr_state is
             when FE =>
-                pcSell <= "0";
-                imRead <= "1";
-                pcLd   <= "1";
+                pcSel <= '0';
+                imRead <= '1';
+                pcLd   <= '1';
             when DE1 =>
                 if (
                     opcode = O_CMP or opcode = O_XOR or opcode = O_AND or opcode = O_ADD or opcode = O_SUB or opcode = O_LB or opcode = O_LBI or opcode = O_SBI
                 ) then
                     busSel <= "0001";
-                    dmRead <= "1";
+                    dmRead <= '1';
 
                 case opcode is 
                     when O_CMP | O_XOR | O_AND | O_ADD | O_SUB | O_LB | O_SB | O_LBI | O_SBI =>
                         busSel <= "0001";
-                        dmRead <= "1";
+                        dmRead <= '1';
                     when OTHERS =>
                         NULL;
                 end case;
@@ -172,107 +172,107 @@ BEGIN
             when DE2 =>
                 if (opcode = O_LBI) then
                     busSel <= "0010";
-                    dmRead <= "1";
+                    dmRead <= '1';
                 end if;
             when EX =>
                 if (opcode = O_IN) then
                     busSel <= "1000";
-                    accSel <= "1";
+                    accSel <= '1';
                     if (inValid = '1') then
-                        accLd <= "1";
+                        accLd <= '1';
                     end if; 
                     inReady <= '1';
                 end if;
 
                 if (opcode = O_OUT) then
-                    outValid <= "1";
+                    outValid <= '1';
                 end if;
 
                 if (opcode = O_MOV) then 
                     busSel <= "0001";
-                    accSel <= "1";
-                    accLd <= "1";
+                    accSel <= '1';
+                    accLd <= '1';
                 end if;
 
                 if (opcode = O_J) then
                     busSel <= "0100";
-                    pcSel <= "1";
-                    pcLd <= "1";
+                    pcSel <= '1';
+                    pcLd <= '1';
                 end if;
 
                 if (opcode = O_JE) then
                     busSel <= "0001";
-                    pcSel <= "1";
+                    pcSel <= '1';
                     if (e_flag = '1') then
-                        pcLd <= "1";
+                        pcLd <= '1';
                     end if;
                 end if;
 
                 if (opcode = O_JNZ) then
                     busSel <= "0001";
-                    pcSel <= "1";
+                    pcSel <= '1';
                     if (z_flag = '0') then
-                        pcLd <= "1";
+                        pcLd <= '1';
                     end if;
                 end if;
 
                 if (opcode = O_CMP) then
                     busSel <= "0010";
-                    flagLd <= "1";
+                    flagLd <= '1';
                 end if;
 
                 if (opcode = O_XOR) then
                     busSel <= "0010";
                     aluOp <= "00";
                     accSel <= "0";
-                    flagLd <= "1";
-                    accLd <= "1";
+                    flagLd <= '1';
+                    accLd <= '1';
                 end if;
 
                 if (opcode = O_AND) then
                     busSel <= "0010";
                     aluOp <= "01";
                     accSel <= "0";
-                    flagLd <= "1";
-                    accLd <= "1";
+                    flagLd <= '1';
+                    accLd <= '1';
                 end if;
 
                 if (opcode = O_ADD) then
                     busSel <= "0010";
                     aluOp <= "10";
                     accSel <= "0";
-                    flagLd <= "1";
-                    accLd <= "1";
+                    flagLd <= '1';
+                    accLd <= '1';
                 end if;
 
                 if (opcode = O_SUB) then
                     busSel <= "0010";
                     aluOp <= "11";
                     accSel <= "0";
-                    flagLd <= "1";
-                    accLd <= "1";
+                    flagLd <= '1';
+                    accLd <= '1';
                 end if;
 
                 if (opcode = O_LB) then
                     busSel <= "0010";
-                    accSel <= "1";
-                    accLd <= "1";
+                    accSel <= '1';
+                    accLd <= '1';
                 end if;
     
-                if (opcode = L_BI) then
+                if (opcode = O_LBI) then
                     busSel <= "0010";
-                    accSel <= "1";
-                    accLd <= "1";
+                    accSel <= '1';
+                    accLd <= '1';
                 end if;
                
             when ME =>
                 if (opcode = O_SB) then
                     busSel <= "0001";
-                    dmWrite <= "1";
+                    dmWrite <= '1';
                 end if;
                 if (opcode = O_SBI) then
                     busSel <= "0010";
-                    dmWrite <= "1";
+                    dmWrite <= '1';
                 end if;
 
             when OTHERS => NULL;
