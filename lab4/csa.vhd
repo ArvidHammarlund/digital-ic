@@ -1,0 +1,58 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_misc.all;
+
+entity csa is
+    port(
+        A, B: in std_logic_vector(7 downto 0);
+        cin: in std_logic;
+        cout: out std_logic;
+        O: out std_logic_vector(7 downto 0)
+    );
+end csa;
+
+architecture dataflow of csa is
+	signal C4 : std_logic;
+	signal s : std_logic_vector(7 downto 0);
+	signal carry : std_logic_vector(1 downto 0);
+	begin
+	rca_L : entity work.rca
+		port map(
+		A => A(3 downto 0),
+		B => B(3 downto 0),
+		cin => cin,
+		cout => C4,
+		O => O(3 downto 0)
+	);
+
+	rca_U0 : entity work.rca
+		port map(
+		A => A(7 downto 4),
+		B => B(7 downto 4),
+		cin => '0',
+		cout => carry(0),
+		O => s(3 downto 0)
+	);
+
+	rca_U1 : entity work.rca
+		port map(
+		A => A(7 downto 4),
+		B => B(7 downto 4),
+		cin => '1',
+		cout => carry(1),
+		O => s(7 downto 4)
+	);
+
+	mux : entity work.mux
+		generic map(d_width => 4)
+		port map(
+		s => C4,
+		i0 => S(3 downto 0),
+		i1 => S(7 downto 4),
+		o => O(7 downto 4)
+	);
+
+	cout <= carry(0) when C4 = '0' else carry(1);
+
+end dataflow;
