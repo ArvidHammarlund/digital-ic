@@ -37,33 +37,31 @@ ARCHITECTURE behavioral OF testbench_lab4 IS
     SIGNAL ref_extOut           : STD_LOGIC_VECTOR(7 DOWNTO 0);
     SIGNAL ref_inReady, ref_outValid : STD_LOGIC;
 
-    -- For vectors
-    PROCEDURE check_output(
-        CONSTANT name     : IN string;
-        SIGNAL observed   : IN std_logic_vector;
-        SIGNAL expected   : IN std_logic_vector
-    ) IS
-    BEGIN
-        ASSERT observed = expected
-            REPORT "Mismatch in " & name &
-                   "! Expected: " & to_hstring(expected) &
-                   " Got: " & to_hstring(observed)
-            SEVERITY ERROR;
-    END PROCEDURE;
+    procedure check_output(
+        constant name: in string;
+        signal observed: in std_logic_vector;
+        signal expected: in std_logic_vector
+    ) is
+    begin
+        assert observed = expected
+            report "Mismatch in " & name &
+                "! Expected: " & to_hstring(expected) &
+                " Got: " & to_hstring(observed)
+            severity error;
+    end procedure;
 
-    -- Overload for single-bit signals
-    PROCEDURE check_output(
-        CONSTANT name     : IN string;
-        SIGNAL observed   : IN std_logic;
-        SIGNAL expected   : IN std_logic
-    ) IS
-    BEGIN
-        ASSERT observed = expected
-            REPORT "Mismatch in " & name &
-                   "! Expected: " & std_logic'image(expected) &
-                   " Got: " & std_logic'image(observed)
-            SEVERITY ERROR;
-    END PROCEDURE;
+    procedure check_output(
+        constant name: in string;
+        signal observed: in std_logic;
+        signal expected: in std_logic
+    ) is
+    begin
+        assert observed = expected
+            report "Mismatch in " & name &
+                "! Expected: " & std_logic'image(expected) &
+                " Got: " & std_logic'image(observed)
+            severity error;
+    end procedure;
 
 BEGIN
 
@@ -135,9 +133,9 @@ BEGIN
     extIn_increment: PROCESS(clk)
     BEGIN
         IF rising_edge(clk) AND
-           (master_load_enable = '1') AND
-           (inValid = '1') AND
-           (inReady = '1') THEN
+        (master_load_enable = '1') AND
+        (inValid = '1') AND
+        (inReady = '1') THEN
             extIn <= std_logic_vector(unsigned(extIn) + 1);
         END IF;
     END PROCESS;
