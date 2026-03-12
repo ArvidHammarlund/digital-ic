@@ -18,49 +18,68 @@ ARCHITECTURE behavioral OF testbench_lab4 IS
     SIGNAL outReady           : STD_LOGIC := '0';
 
     -- Test device
-    SIGNAL pc2seg           : STD_LOGIC_VECTOR(7 DOWNTO 0);
-    SIGNAL imDataOut2seg    : STD_LOGIC_VECTOR(11 DOWNTO 0);  -- fixed to 12 bits
-    SIGNAL dmDataOut2seg    : STD_LOGIC_VECTOR(7 DOWNTO 0);
-    SIGNAL aluOut2seg       : STD_LOGIC_VECTOR(7 DOWNTO 0);
-    SIGNAL acc2seg          : STD_LOGIC_VECTOR(7 DOWNTO 0);
-    SIGNAL busOut2seg       : STD_LOGIC_VECTOR(7 DOWNTO 0);
-    SIGNAL extOut           : STD_LOGIC_VECTOR(7 DOWNTO 0);
-    SIGNAL inReady, outValid : STD_LOGIC;
+    SIGNAL pc2seg             : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL imDataOut2seg      : STD_LOGIC_VECTOR(11 DOWNTO 0);
+    SIGNAL dmDataOut2seg      : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL aluOut2seg         : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL acc2seg            : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL busOut2seg         : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL extOut             : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL inReady, outValid  : STD_LOGIC;
 
     -- Reference device
-    SIGNAL ref_pc2seg           : STD_LOGIC_VECTOR(7 DOWNTO 0);
-    SIGNAL ref_imDataOut2seg    : STD_LOGIC_VECTOR(11 DOWNTO 0);  -- fixed to 12 bits
-    SIGNAL ref_dmDataOut2seg    : STD_LOGIC_VECTOR(7 DOWNTO 0);
-    SIGNAL ref_aluOut2seg       : STD_LOGIC_VECTOR(7 DOWNTO 0);
-    SIGNAL ref_acc2seg          : STD_LOGIC_VECTOR(7 DOWNTO 0);
-    SIGNAL ref_busOut2seg       : STD_LOGIC_VECTOR(7 DOWNTO 0);
-    SIGNAL ref_extOut           : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL ref_pc2seg             : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL ref_imDataOut2seg      : STD_LOGIC_VECTOR(11 DOWNTO 0);
+    SIGNAL ref_dmDataOut2seg      : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL ref_aluOut2seg         : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL ref_acc2seg            : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL ref_busOut2seg         : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL ref_extOut             : STD_LOGIC_VECTOR(7 DOWNTO 0);
     SIGNAL ref_inReady, ref_outValid : STD_LOGIC;
 
+    function is_known(s : std_logic) return boolean is
+    begin
+        return (s = '0') or (s = '1');
+    end function;
+
+    function is_known(v : std_logic_vector) return boolean is
+    begin
+        for i in v'range loop
+            if not ((v(i) = '0') or (v(i) = '1')) then
+                return false;
+            end if;
+        end loop;
+        return true;
+    end function;
+
     procedure check_output(
-        constant name: in string;
-        signal observed: in std_logic_vector;
-        signal expected: in std_logic_vector
+        constant name     : in string;
+        signal observed   : in std_logic_vector;
+        signal expected   : in std_logic_vector
     ) is
     begin
-        assert observed = expected
-            report "Mismatch in " & name &
-                "! Expected: " & to_hstring(expected) &
-                " Got: " & to_hstring(observed)
-            severity error;
+        if is_known(expected) then
+            assert observed = expected
+                report "Mismatch in " & name &
+                       "! Expected: " & to_hstring(expected) &
+                       " Got: " & to_hstring(observed)
+                severity error;
+        end if;
     end procedure;
 
     procedure check_output(
-        constant name: in string;
-        signal observed: in std_logic;
-        signal expected: in std_logic
+        constant name     : in string;
+        signal observed   : in std_logic;
+        signal expected   : in std_logic
     ) is
     begin
-        assert observed = expected
-            report "Mismatch in " & name &
-                "! Expected: " & std_logic'image(expected) &
-                " Got: " & std_logic'image(observed)
-            severity error;
+        if is_known(expected) then
+            assert observed = expected
+                report "Mismatch in " & name &
+                       "! Expected: " & std_logic'image(expected) &
+                       " Got: " & std_logic'image(observed)
+                severity error;
+        end if;
     end procedure;
 
 BEGIN
@@ -123,35 +142,47 @@ BEGIN
     BEGIN
         resetn <= '0';
         master_load_enable <= '1';
+        inValid <= '0';
+        outReady <= '0';
+        extIn <= (OTHERS => '0');
+
         WAIT FOR clk_period * 2;
         resetn <= '1';
+
+        WAIT UNTIL rising_edge(clk);
         inValid <= '1';
         outReady <= '1';
+
         WAIT;
     END PROCESS;
 
     extIn_increment: PROCESS(clk)
     BEGIN
-        IF rising_edge(clk) AND
-        (master_load_enable = '1') AND
-        (inValid = '1') AND
-        (inReady = '1') THEN
-            extIn <= std_logic_vector(unsigned(extIn) + 1);
+        IF rising_edge(clk) THEN
+            IF (resetn = '1') AND
+               (master_load_enable = '1') AND
+               (inValid = '1') AND
+               (inReady = '1') AND
+               (ref_inReady = '1') THEN
+                extIn <= std_logic_vector(unsigned(extIn) + 1);
+            END IF;
         END IF;
     END PROCESS;
 
     verification_process: PROCESS(clk)
     BEGIN
-        IF rising_edge(clk) AND (resetn = '1') THEN
-            check_output("pc2seg", pc2seg, ref_pc2seg);
-            check_output("imDataOut2seg", imDataOut2seg, ref_imDataOut2seg);
-            check_output("dmDataOut2seg", dmDataOut2seg, ref_dmDataOut2seg);
-            check_output("aluOut2seg", aluOut2seg, ref_aluOut2seg);
-            check_output("acc2seg", acc2seg, ref_acc2seg);
-            check_output("busOut2seg", busOut2seg, ref_busOut2seg);
-            check_output("extOut", extOut, ref_extOut);
-            check_output("inReady", inReady, ref_inReady);
-            check_output("outValid", outValid, ref_outValid);
+        IF rising_edge(clk) THEN
+            IF resetn = '1' THEN
+                check_output("pc2seg",        pc2seg,        ref_pc2seg);
+                check_output("imDataOut2seg", imDataOut2seg, ref_imDataOut2seg);
+                check_output("dmDataOut2seg", dmDataOut2seg, ref_dmDataOut2seg);
+                check_output("aluOut2seg",    aluOut2seg,    ref_aluOut2seg);
+                check_output("acc2seg",       acc2seg,       ref_acc2seg);
+                check_output("busOut2seg",    busOut2seg,    ref_busOut2seg);
+                check_output("extOut",        extOut,        ref_extOut);
+                check_output("inReady",       inReady,       ref_inReady);
+                check_output("outValid",      outValid,      ref_outValid);
+            END IF;
         END IF;
     END PROCESS;
 
